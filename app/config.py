@@ -12,7 +12,7 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(BASE_DIR, '..', DB_DIR, "db2.sqlite")
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOAD_FOLDER = os.getenv('UPLOAD_FOLDER', BASE_DIR + '/uploads')
-    GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY', 'NOKEY')
+    GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY', os.getenv('google_api_key'))
     LOG_DIR = os.path.join(BASE_DIR, '../logs')
 
 
