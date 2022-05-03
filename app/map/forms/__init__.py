@@ -4,6 +4,7 @@ from wtforms.fields import *
 
 class csv_upload(FlaskForm):
     file = FileField()
+    submit = SubmitField()
 
 class location_form(FlaskForm):
     title = StringField("Title", [
