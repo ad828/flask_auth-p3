@@ -9,6 +9,28 @@
 
 * [Developmental Deployment](https://is219p3dev.herokuapp.com/)
 
+
+
+
+## Project 3 - Requirements
+Project 3 took a bit of troubleshooting but I was able to pull through after a while.
+#If you don't see the map, make sure that you add locations and it will populate.
+
+For project 3 you need to be able to have the following:
+
+1.  Login ✅ / Logout ✅/ Registration with JavaScript Password checking✅ /w appropriate backend validation as well ✅ (I used regex)
+
+2.  CSV file Upload ✅ and display a list of locations ✅ on a google map and the ability to edit, add and delete the locations from a management page ✅
+
+3.  Google Maps display of information uploaded in the CSV file. ✅
+
+4.  Pagination on the browse page ✅
+
+Submit a link to GitHub with your badge for passing test and being deployed to Heroku.  ✅
+
+
+
+
 ## Setting up CI/CD
 
 The result of this will be that when you create a pull request to merge a branch to master, it will deploy to your
