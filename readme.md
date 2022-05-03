@@ -1,11 +1,11 @@
 # Project Setup
 
-[![Production Workflow](https://github.com/kaw393939/docker_flask/actions/workflows/prod.yml/badge.svg)](https://github.com/kaw393939/docker_flask/actions/workflows/prod.yml)
+[![Production Workflow](https://github.com/ad828/flask_auth-p3/actions/workflows/prod.yml/badge.svg)](https://github.com/ad828/flask_auth-p3/actions/workflows/prod.yml)
 
 * [Production Deployment](https://is219p3.herokuapp.com/)
 
 
-[![Development Workflow](https://github.com/kaw393939/docker_flask/actions/workflows/dev.yml/badge.svg)](https://github.com/kaw393939/docker_flask/actions/workflows/dev.yml)
+[![Development Workflow 3.8](https://github.com/ad828/flask_auth-p3/actions/workflows/dev.yml/badge.svg)](https://github.com/ad828/flask_auth-p3/actions/workflows/dev.yml)
 
 * [Developmental Deployment](https://is219p3dev.herokuapp.com/)
 
