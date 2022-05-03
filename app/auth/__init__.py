@@ -137,7 +137,7 @@ def edit_user(user_id):
         flash('User Edited Successfully', 'success')
         current_app.logger.info("edited a user")
         return redirect(url_for('auth.browse_users'))
-    return render_template('user_edit.html', form=form)
+    return render_template('user_edit.html', form=form, user=user)
 
 
 @auth.route('/users/new', methods=['POST', 'GET'])

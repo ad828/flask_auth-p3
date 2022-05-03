@@ -5,7 +5,6 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         {% block styles %}
             <!-- Bootstrap CSS -->
             {{ bootstrap.load_css() }}
@@ -39,8 +38,24 @@
                             {{ render_nav_item('simple_pages.index', 'Home') }}
                         {% endif %}
                         {{ render_nav_item('map.map_locations','Map' ) }}
-                        {{ render_nav_item('simple_pages.about','About') }}
-                        {{ render_nav_item('simple_pages.welcome','Welcome') }}
+                                <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
+                                   role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    Location Settings
+                                </a>
+                                <ul class="dropdown-menu " aria-labelledby="navbarDarkDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="{{ url_for("map.map_locations") }}">
+                                        View Map
+                                    </a></li>
+                                    <li><a class="dropdown-item" href="{{ url_for("map.location_upload") }}">
+                                        Upload Locations
+                                    </a></li>
+                                    <li><a class="dropdown-item" href="{{ url_for("map.browse_locations") }}">
+                                        Browse Locations
+                                    </a></li>
+                                </ul>
+                            </li>
                     </div>
                 </div>
                 <div class="navbar-nav d-flex">
