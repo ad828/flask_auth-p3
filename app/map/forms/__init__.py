@@ -19,3 +19,5 @@ class location_form(FlaskForm):
     ], description="Latitude coordinate value")
 
     population = StringField("Population", description="Population count")
+
+    submit = SubmitField()
