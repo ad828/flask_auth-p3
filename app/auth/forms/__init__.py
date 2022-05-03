@@ -1,7 +1,8 @@
 from flask_wtf import FlaskForm
 from wtforms import validators
 from wtforms.fields import *
-
+from wtforms.validators import *
+import re
 
 class login_form(FlaskForm):
     email = EmailField('Email Address', [
@@ -28,6 +29,21 @@ class register_form(FlaskForm):
     ], description="Create a password ")
     confirm = PasswordField('Repeat Password', description="Please retype your password to confirm it is correct")
     submit = SubmitField()
+
+    def validate_password(self, password):
+        #lowercase
+        #uppercase
+        #1specialchar
+        errormsg = f'This doesnt match the required fields'
+        pattern = '^(?=.{6,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+!=]).*$'
+        result = re.match(pattern, self.password.data)
+
+        if result is None:
+            raise ValidationError(errormsg)
+
+
+
+
 
 
 class profile_form(FlaskForm):
@@ -61,3 +77,4 @@ class security_form(FlaskForm):
 class csv_upload(FlaskForm):
     file = FileField()
     submit = SubmitField()
+

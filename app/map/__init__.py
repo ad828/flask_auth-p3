@@ -95,7 +95,7 @@ def add_location():
         location = Location(title=form.title.data, longitude=form.longitude.data, latitude=form.latitude.data, population=form.population.data)
         db.session.add(location)
         db.session.commit()
-        flash('Added new location', 'success')
+        flash('New Location', 'success')
         return redirect(url_for('map.browse_locations'))
 
     return render_template("location_new.html", form=form)
@@ -106,7 +106,7 @@ def delete_location(location_id):
     location = Location.query.get(location_id)
     db.session.delete(location)
     db.session.commit()
-    flash('Location Deleted', 'success')
+    flash('Delete!', 'success')
     return redirect(url_for('map.browse_locations'), 302)
 
 @map.route('/locations/<int:location_id>/edit', methods=['POST', "GET"])
